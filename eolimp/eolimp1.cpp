@@ -106,3 +106,74 @@ int eolimp1::twofactory(){
     
     
 }
+int eolimp1::coription(){
+    ifstream inf("input.txt");
+    ofstream outf("output.txt");
+    int n;float p; vector<long double> g;long double min1;long double min2; int ind1;
+    int ind2; float a; 
+    inf>>n;inf>>p;
+   for (int i=0;i<n;i++){
+       inf>>a;g.push_back(a);
+   }
+ 
+    
+    //g.erase(g.begin()+3);
+    //sort(g.begin(),g.end());
+    
+    while (g.size()>1){
+        min1=g.at(0);ind1=0;
+        for(int i=0;i<g.size();i++){
+            if(g.at(i)<min1){min1=g.at(i);ind1=i;};
+            }
+        if(ind1!=0){min2=g.at(0); ind2=0;}else{min2=g.at(1);ind2=1;}
+          
+        for(int i=0;i<g.size();i++){
+            if((g.at(i)<min2)&&(i!=ind1)){min2=g.at(i);ind2=i;};
+            }
+       g.at(ind1)=g.at(ind1) +g.at(ind2)-(g.at(ind1)+g.at(ind2))*p/100  ;
+        
+       g.erase(g.begin()+ind2);
+    }
+    
+    outf.precision(2);
+    outf.setf(ios::fixed, ios::floatfield);
+      outf<<g.at(0)<<"\n";
+         
+ }
+
+
+int eolimp::coriptionSort(){
+    ifstream inf("input.txt");
+    ofstream outf("output.txt");
+    int n;float p; vector<long double> g; float a; 
+    inf>>n;inf>>p;
+   for (int i=0;i<n;i++){
+       inf>>a;g.push_back(a);
+   }
+
+    sort(g.begin(),g.end());
+    int k=0;
+    while (g.size()>1){
+        if(k<g.size()-1){
+       if(g.at(k)<g.at(k+1)){ 
+       k=0;
+       g.at(k)=g.at(k) +g.at(k+1)-(g.at(k)+g.at(k+1))*p/100  ;
+       g.erase(g.begin()+k+1);
+      
+       }else{   k++;
+                if(k<g.size()-1){
+                g.at(k)=g.at(k) +g.at(k+1)-(g.at(k)+g.at(k+1))*p/100  ;
+                g.erase(g.begin()+k+1);
+                }
+                else{g.at(0)=g.at(0)+g.at(k)-(g.at(0)+g.at(k))*p/100;
+                     g.erase(g.begin()+k);k=0;
+                }
+             }
+     } else{g.at(0)=g.at(0)+g.at(k)-(g.at(0)+g.at(k))*p/100;
+             g.erase(g.begin()+k);k=0;}
+    }
+    outf.precision(2);
+    outf.setf(ios::fixed, ios::floatfield);
+      outf<<g.at(0)<<"\n";
+         
+ }

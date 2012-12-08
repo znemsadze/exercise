@@ -18,6 +18,8 @@ public:
     virtual int twofactory();
     int digits();
     int vauchers();
+    int coription();
+    int coriptionSort();
 private:
 
 };
