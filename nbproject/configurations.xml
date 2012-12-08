@@ -12,6 +12,8 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>eolimp/Solwed.cpp</itemPath>
+      <itemPath>eolimp/Solwed.h</itemPath>
       <itemPath>eolimp/eolimp1.cpp</itemPath>
       <itemPath>eolimp/eolimp1.h</itemPath>
       <itemPath>main.cpp</itemPath>

@@ -10,6 +10,8 @@
 #include <fstream>
 #include <stab.h>
 #include <math.h>
+#include <vector>
+#include <algorithm>
 using namespace std;
 eolimp1::eolimp1() {
 }
@@ -142,7 +144,7 @@ int eolimp1::coription(){
  }
 
 
-int eolimp::coriptionSort(){
+int eolimp1::coriptionSort(){
     ifstream inf("input.txt");
     ofstream outf("output.txt");
     int n;float p; vector<long double> g; float a; 

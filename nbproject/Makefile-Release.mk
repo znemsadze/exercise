@@ -36,7 +36,8 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/main.o \
-	${OBJECTDIR}/eolimp/eolimp1.o
+	${OBJECTDIR}/eolimp/eolimp1.o \
+	${OBJECTDIR}/eolimp/Solwed.o
 
 
 # C Compiler Flags
@@ -72,6 +73,11 @@ ${OBJECTDIR}/eolimp/eolimp1.o: eolimp/eolimp1.cpp
 	${MKDIR} -p ${OBJECTDIR}/eolimp
 	${RM} $@.d
 	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/eolimp/eolimp1.o eolimp/eolimp1.cpp
+
+${OBJECTDIR}/eolimp/Solwed.o: eolimp/Solwed.cpp 
+	${MKDIR} -p ${OBJECTDIR}/eolimp
+	${RM} $@.d
+	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/eolimp/Solwed.o eolimp/Solwed.cpp
 
 # Subprojects
 .build-subprojects:

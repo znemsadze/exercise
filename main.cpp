@@ -12,6 +12,7 @@
 #include <fstream>
 #include <vector>
 #include <algorithm>
+#include "eolimp/Solwed.h"
 //#include "eolimp/eolimp1.h"
 using namespace std;
 
@@ -20,8 +21,12 @@ using namespace std;
  */
 
 
+
+
+
 int main(int argc, char** argv) {
-     
-    return 0;
+    Solwed s;
+    int k=s.matches();
+     return 0;
 }
 
