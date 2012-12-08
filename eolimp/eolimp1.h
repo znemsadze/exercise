@@ -17,6 +17,7 @@ public:
     
     virtual int twofactory();
     int digits();
+    int vauchers();
 private:
 
 };

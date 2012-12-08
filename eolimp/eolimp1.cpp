@@ -57,3 +57,52 @@ int eolimp1::twofactory(){
     cout<<k1<<"\n";
     return 0;
 }
+ int eolimp1::vauchers(){
+    ifstream inf("input.txt");
+   ofstream outf("output.txt");
+    int m[15][2];
+    int d[2];int n;
+    inf>>n;int a;int b;
+    for(int i=0;i<n;i++){
+ 
+       inf>>m[i][0];inf>>m[i][1];
+      
+    }
+    
+    
+   
+    
+    for (int i=0;i<n;i++){
+        
+        for(int j=i+1;j<n-1;j++){
+            if((m[i][1]*m[i][0])<(m[j][1]*m[j][0])){
+                
+                d[0]=m[i][0];d[1]=m[i][1];
+                m[i][1]=m[j][1];m[i][0]=m[j][0];
+                m[j][0]=d[0];m[j][1]=d[1];
+                
+            }
+            else if((m[i][1]*m[i][0])==(m[j][1]*m[j][0])){
+                
+               if(m[i][1]<(m[j][1])){
+                d[0]=m[i][0];d[1]=m[i][1];
+                m[i][1]=m[j][1];m[i][0]=m[j][0];
+                m[j][0]=d[0];m[j][1]=d[1];
+                }
+            }
+                 
+        }
+    }
+
+     int k=0; int k1=0;int s=0;
+    while(k<n)
+    {
+         
+        if(m[k][0]>k1){s=s+m[k][1]*(m[k][0]-k1);  k1++;}
+        
+        k++;
+    }
+    outf<<s<<"\n";
+    
+    
+}
