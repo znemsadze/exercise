@@ -10,6 +10,7 @@
 #include <iostream>
 #include <stdio.h>
 #include <fstream>
+#include "eolimp/eolimp1.h"
 using namespace std;
 
 /*
@@ -40,27 +41,7 @@ int matchModel(){
     cout<<k*12-(k-1)*4<<"\n";
 
 }
-int twoFaactors(){
-    int k;
-    cin>>k;int k1=0;
-    long long b=0;   
-            while(true){
-                b++; k1=0;
-        for(long long j=1;j<=sqrt(b);j++) {
-            if(b%j==0){
-                k1++;
-             }
-            if (k1>k)break;
-        }  
-              if(k1==k){
-                    cout<<b<<"\n";break;
-                }  
-    
-     }
 
-      
- 
-}
 
 int vauchers(){
     ifstream inf("input.txt");
@@ -138,10 +119,9 @@ int coription(){
 }
 
 int main(int argc, char** argv) {
-    int k=  vauchers();
+    
+    eolimp1 e;
+    int k=e.twofactory();
    
     return 0;
 }
-
-
-
