@@ -12,7 +12,7 @@
 #include <fstream>
 #include <vector>
 #include <algorithm>
-#include "eolimp/Solwed.h"
+#include "eolimp/Solved.h"
 //#include "eolimp/eolimp1.h"
 using namespace std;
 

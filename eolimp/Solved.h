@@ -8,11 +8,11 @@
 #ifndef SOLWED_H
 #define	SOLWED_H
 
-class Solwed {
+class Solved {
 public:
-    Solwed();
-    Solwed(const Solwed& orig);
-    virtual ~Solwed();
+    Solved();
+    Solved(const Solved& orig);
+    virtual ~Solved();
     int matches();
 private:
 

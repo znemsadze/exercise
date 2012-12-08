@@ -5,7 +5,7 @@
  * Created on December 8, 2012, 6:50 PM
  */
 
-#include "Solwed.h"
+#include "Solved.h"
 #include <iostream>
 #include <fstream>
 #include <stab.h>
@@ -14,16 +14,16 @@
 #include <algorithm>
 
 using namespace std;
-Solwed::Solwed() {
+Solved::Solved() {
 }
 
-Solwed::Solwed(const Solwed& orig) {
+Solved::Solved(const Solved& orig) {
 }
 
-Solwed::~Solwed() {
+Solved::~Solved() {
 }
 
-int Solwed::matches(){
+int Solved::matches(){
      ifstream inf("input.txt");
      ofstream outf("output.txt");
      long long n;long long result;
