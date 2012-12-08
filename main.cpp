@@ -16,22 +16,7 @@ using namespace std;
 /*
  * 
  */
-int digits(){
 
-    long long k;
-    cin>>k;
-    int k1=1;
-    for (int i=1;i<10;i++)
-    {
-        k=k/10;
-        if(k>0)k1++;
-        else
-            break;
-    }
-    
-    cout<<k1<<"\n";
-    return 0;
-}
 
 int matchModel(){
 
