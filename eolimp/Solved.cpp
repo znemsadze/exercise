@@ -68,3 +68,32 @@ int Solved::matchModel(){
    outf<<kb<<"\n";
    
 }
+
+int Solved::bigAccuracy(){
+     ifstream inf("input.txt");
+     ofstream outf("output.txt");
+     int m;int n;int k;int mm;
+     inf>>m>>n>>k;
+     char ch[k], result[k] ;
+     
+     int k1=0;int wl=m/n;int rem=m%n;
+     int j=0;
+      
+     while(wl/10>0)
+      {
+       ch[j]='0'+wl%10;wl=wl/10;
+       j++;
+      }ch[j]='0'+wl%10;j++;ch[j]=0;
+      for(int i=0;i<j;i++){
+          result[i]=ch[j-i-1];
+      }result[j]='.';j++; 
+       
+      
+      
+     while(k1<k)
+     {
+         rem=rem*10;mm=rem/n;result[j]='0'+mm;j++;rem=rem-mm*n;k1++;
+     }result[j]=0;
+     outf<<result<<"\n";
+}
+

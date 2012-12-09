@@ -15,6 +15,7 @@ public:
     virtual ~Solved();
     int matches();
     int matchModel();
+    int bigAccuracy();
 private:
 
 };
