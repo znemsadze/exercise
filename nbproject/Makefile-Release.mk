@@ -36,8 +36,8 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/main.o \
-	${OBJECTDIR}/eolimp/eolimp1.o \
-	${OBJECTDIR}/eolimp/Solwed.o
+	${OBJECTDIR}/eolimp/Solved.o \
+	${OBJECTDIR}/eolimp/eolimp1.o
 
 
 # C Compiler Flags
@@ -69,15 +69,15 @@ ${OBJECTDIR}/main.o: main.cpp
 	${RM} $@.d
 	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/main.o main.cpp
 
+${OBJECTDIR}/eolimp/Solved.o: eolimp/Solved.cpp 
+	${MKDIR} -p ${OBJECTDIR}/eolimp
+	${RM} $@.d
+	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/eolimp/Solved.o eolimp/Solved.cpp
+
 ${OBJECTDIR}/eolimp/eolimp1.o: eolimp/eolimp1.cpp 
 	${MKDIR} -p ${OBJECTDIR}/eolimp
 	${RM} $@.d
 	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/eolimp/eolimp1.o eolimp/eolimp1.cpp
-
-${OBJECTDIR}/eolimp/Solwed.o: eolimp/Solwed.cpp 
-	${MKDIR} -p ${OBJECTDIR}/eolimp
-	${RM} $@.d
-	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/eolimp/Solwed.o eolimp/Solwed.cpp
 
 # Subprojects
 .build-subprojects:

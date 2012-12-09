@@ -14,6 +14,7 @@ public:
     Solved(const Solved& orig);
     virtual ~Solved();
     int matches();
+    int matchModel();
 private:
 
 };
