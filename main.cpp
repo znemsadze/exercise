@@ -11,67 +11,72 @@
 #include <stdio.h>
 #include <fstream>
 #include <vector>
+#include <string>
 #include <algorithm>
-//#include "eolimp/Solved.h"
-//#include "eolimp/eolimp1.h"
+#include <queue>
 using namespace std;
 
 /*
  * 
  */
-int spiderAndFly(){
 
-    int a,b,c,x1,y1,x2,y2,z2;
-     ifstream inf("input.txt");
-     ofstream outf("output.txt");
-//     FILE *outf = fopen("output.txt", "w");
-    outf.precision(2);
-    outf.setf(ios::fixed, ios::floatfield);
-    inf>>a>>b>>c>>x1>>y1>>x2>>y2>>z2;
-    int gg;
-    if(z2>0) {
-    if(x2==0){
-           gg=x1;
-              outf<<sqrt(gg*gg+pow(gg/z2*abs(y2-y1),2))+
-                        sqrt(pow(z2,2)+pow(z2/gg*abs(y2-y1),2))<<"\n";
+struct Route {
+    int id;
+    int collor;
+} route;
 
-    }else if(x2==a){
-        gg=a-x1;
-                      outf<<sqrt(gg*gg+pow(gg/z2*abs(y2-y1),2))+
-                        sqrt(pow(z2,2)+pow(z2/gg*abs(y2-y1),2))<<"\n";
+int meeting(){
+   freopen("input.txt", "rt", stdin);
+   freopen("output.txt", "wt", stdout);
+   vector< vector<Route> > vct(0,vector<Route>(0));
+   vector<int> tmp(0);
+   Route r;
+   int n,m,l,p=0,kk=0,v,ind;
+   cin>>n;cin>>m;
+   for(int i=0;i<m;i++){
+       cin>>l;tmp.clear();
+       for(int j=0;i<l;j++){
+           cin>>v;
+           tmp.push_back(v);
+       }
+       for(int j=0;j<l;j++){ ind =0;
+       for(int k=0;k<kk;k++){ 
+           if(vct[k][0].id==tmp(j)){ ind =1;
+                                     for(int jj=0;jj<l;jj++)
+                                        {
+                                         if(jj!=j){ r.id=tmp;r.collor=0; vct[k].push_back(r);}
+                                        }
+                                     }             
+         }
+          if(ind==0){kk++;
+              vct.push_back(vector<Route>(0));
+              vct[kk].push_back(tmp(j));
+                                    for(int jj=0;jj<l;jj++)
+                                        {
+                                         if(jj!=j){ r.id=tmp;r.collor=0; vct[kk].push_back(r);}
+                                        }         
+          }
+       }
+   }
+   
+   
+   for(int i=0;i<vct.size();i++){
+       
+   
+   }
 
-    }else if(y2==0){
-        gg=y1;
-                      outf<<sqrt(gg*gg+pow(gg/z2*abs(x2-x1),2))+
-                        sqrt(pow(z2,2)+pow(z2/gg*abs(x2-x1),2))<<"\n";
+} 
 
-    }else if(gg==b)
-    {  gg=b-y1;
-                  outf<<sqrt(gg*gg+pow(gg/z2*abs(x2-x1),2))+
-                        sqrt(pow(z2,2)+pow(z2/gg*abs(x2-x1),2))<<"\n";
-
-    }
-        
-
-      
- //    fprintf(outf,"%.2f",sqrt(gg*gg+pow(gg/z2*abs(y2-y1),2))+
-//                        sqrt(pow(z2,2)+pow(z2/gg*abs(y2-y1),2)));
-//     
-    }else{
-     outf<<sqrt(pow(abs(x1-x2),2)+pow(abs(y1-y2),2))<<"\n";
-//      fprintf(outf,"%.2f",sqrt(pow(abs(x1-x2),2)+pow(abs(y1-y2),2)));
-    }
-/// fclose(outf);   
-}
+ 
 
 
-
-
-
-int main(int argc, char** argv) {
-    
-    int k=spiderAndFly();
+int main() {
+       
+    Grafs gr=Grafs();
+    int k=gr.isenbaev();
  
    return 0;
 }
+
+
 

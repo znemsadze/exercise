@@ -12,6 +12,8 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>timus/Grafs.cpp</itemPath>
+      <itemPath>timus/Grafs.h</itemPath>
       <itemPath>eolimp/Solved.cpp</itemPath>
       <itemPath>eolimp/Solved.h</itemPath>
       <itemPath>eolimp/eolimp1.cpp</itemPath>

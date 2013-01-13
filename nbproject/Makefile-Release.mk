@@ -37,6 +37,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 OBJECTFILES= \
 	${OBJECTDIR}/main.o \
 	${OBJECTDIR}/eolimp/Solved.o \
+	${OBJECTDIR}/timus/Grafs.o \
 	${OBJECTDIR}/eolimp/eolimp1.o
 
 
@@ -73,6 +74,11 @@ ${OBJECTDIR}/eolimp/Solved.o: eolimp/Solved.cpp
 	${MKDIR} -p ${OBJECTDIR}/eolimp
 	${RM} $@.d
 	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/eolimp/Solved.o eolimp/Solved.cpp
+
+${OBJECTDIR}/timus/Grafs.o: timus/Grafs.cpp 
+	${MKDIR} -p ${OBJECTDIR}/timus
+	${RM} $@.d
+	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/timus/Grafs.o timus/Grafs.cpp
 
 ${OBJECTDIR}/eolimp/eolimp1.o: eolimp/eolimp1.cpp 
 	${MKDIR} -p ${OBJECTDIR}/eolimp

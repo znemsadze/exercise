@@ -20,6 +20,8 @@ public:
     int vauchers();
     int coription();
     int coriptionSort();
+    int spiderFly();
+    
 private:
 
 };
