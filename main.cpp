@@ -74,7 +74,15 @@ int meeting(){
        cin>>person.money>>person.v>>person.card;
        person.put=0;
        persons.push_back(person); 
+       
    }
+   int rt=0;
+   for (int i=0;i<p-1;i++){
+       if(persons[i].v==persons[i+1].v){rt++;}
+   }
+   if(rt==p){cout<<persons[0].v<<" "<<0<<endl;return 0;}
+   if(p==1){cout<<persons[0].v<<" "<<0<<endl;return 0;}
+   
    
    queue<Route> queue;
 
