@@ -14,6 +14,8 @@ public:
     Grafs(const Grafs& orig);
     virtual ~Grafs();
     int isenbaev();
+    int meeting();
+    
 private:
 
 };
