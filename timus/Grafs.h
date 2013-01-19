@@ -15,6 +15,8 @@ public:
     virtual ~Grafs();
     int isenbaev();
     int meeting();
+    int rightPlate();
+    
     
 private:
 
