@@ -1,5 +1,8 @@
-3 2
-3
-1 1
-3 2
-1 2
+7
+Isenbaev Oparin Toropov
+Ayzenshteyn Oparin Samsonov
+Ayzenshteyn Chevdar Samsonov
+Fominykh Isenbaev Oparin
+Dublennykh Fominykh Ivankov
+Burmistrov Dublennykh Kurpilyanskiy
+Cormen Leiserson Rivest

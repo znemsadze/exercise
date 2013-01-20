@@ -16,6 +16,7 @@ public:
     int isenbaev();
     int meeting();
     int rightPlate();
+    int metro();
     
     
 private:

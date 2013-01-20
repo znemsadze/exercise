@@ -40,7 +40,17 @@ struct Plate {
     int parentId;
     int color;
 } plate;
- 
+ struct Puarter{
+      long double dist;
+    int vzt;
+    int wgh;
+    
+    
+};
+struct Diag{
+    int x;
+    int y;
+};
 Grafs::Grafs() {
 }
 
@@ -49,7 +59,7 @@ Grafs::Grafs(const Grafs& orig) {
 
 Grafs::~Grafs() {
 }
-
+//unresolved
 int Grafs::meeting(){
 
    vector< vector<Route> > vct(0,vector<Route>(0));
@@ -328,4 +338,57 @@ int Grafs::rightPlate(){
 
 }
 
+int Grafs::metro(){
+   int n,m,k,x,y;
 
+    cin>>n>>m;
+    Puarter vct[1002][2];
+    Diag dg[100];int mxdist=n*m*1000+1;
+    for(int i=0;i<=m;i++){
+         
+            vct[i][0].dist=mxdist;
+             vct[i][1].dist=mxdist;
+            vct[i][0].wgh=0;
+            vct[i][0].vzt=0;
+        
+    }
+    cin>>k;
+    for(int i=0;i<k;i++){
+        cin>>dg[i].x>>dg[i].y;
+       }
+ vct[0][0].dist=0;
+ int nn=0;
+ while(nn<=n){nn++;
+    for(int i=0;i<=m;i++)
+    {
+         if(vct[i+1][0].dist>(vct[i][0].dist+100)){
+                vct[i+1][0].dist=vct[i][0].dist+100;
+            }
+         if(vct[i][1].dist>(vct[i][0].dist+100)){
+                vct[i][1].dist=vct[i][0].dist+100;
+            }
+
+         for(int j=0;j<k;j++){
+             if((dg[j].y==(i+1))&&(dg[j].x==nn)){
+                if(vct[i+1][1].dist>(vct[i][0].dist+sqrt(20000.0))){
+                    vct[i+1][1].dist=vct[i][0].dist+sqrt(20000.0);
+                }
+                break;
+             }
+         }
+     }
+ if(nn<=n){
+ for(int i=0;i<=m;i++){
+   vct[i][0].dist=vct[i][1].dist;
+   vct[i][1].dist=mxdist;
+ }
+ }
+ 
+   }    
+ 
+            
+
+    
+    cout<<(long)(vct[m][0].dist+0.5);
+    return 0;
+}
