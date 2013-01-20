@@ -51,8 +51,7 @@ Grafs::~Grafs() {
 }
 
 int Grafs::meeting(){
-   freopen("input.txt", "rt", stdin);
-   freopen("output.txt", "wt", stdout);
+
    vector< vector<Route> > vct(0,vector<Route>(0));
    vector<int> tmp(0);
    Route r;
