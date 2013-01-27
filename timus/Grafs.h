@@ -17,7 +17,7 @@ public:
     int meeting();
     int rightPlate();
     int metro();
-    
+    int curencyExchange();
     
 private:
 

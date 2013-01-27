@@ -51,6 +51,16 @@ struct Diag{
     int x;
     int y;
 };
+
+struct Edge{
+    int s;
+    int d;
+    float rate;
+    float comis;
+    
+    
+};
+ 
 Grafs::Grafs() {
 }
 
@@ -392,3 +402,58 @@ int Grafs::metro(){
     cout<<(long)(vct[m][0].dist+0.5);
     return 0;
 }
+
+int Grafs::curencyExchange(){
+   freopen("input.txt", "rt", stdin);
+   freopen("output.txt", "wt", stdout);
+    int n,s,m,kk=0,ind; Edge edges[201];
+    float v; long double vrts[101];
+    cin>>n>>m>>s>>v;
+    for(int i=0;i<m;i++ ){
+        cin>>edges[2*i].s>>edges[2*i].d>>edges[2*i].rate
+           >>edges[2*i].comis>>edges[2*i+1].rate>>edges[2*i+1].comis;
+        edges[2*i+1].s=edges[2*i].d;
+        edges[2*i+1].d=edges[2*i].s;
+   
+ 
+    }
+    
+    for(int i=0;i<=n;i++){
+        vrts[i]=0.0;
+          
+    }vrts[s]=v;
+    
+ 
+        
+    for(int i=0; i<n;i++){
+        for(int j=0;j<2*m;j++)
+        {
+            if((vrts[edges[j].s]>-1)&& 
+               (vrts[edges[j].d] <((vrts[edges[j].s] -edges[j].comis)*edges[j].rate))
+                    ){
+                if(((vrts[edges[j].s] -edges[j].comis)*edges[j].rate)>0)
+                vrts[edges[j].d] =((vrts[edges[j].s]-edges[j].comis)*edges[j].rate);
+                
+            }
+        }
+     
+    }
+ 
+     ind=0;
+        for(int j=0;j<2*m;j++)
+        {
+            if((vrts[edges[j].s] >-1)&&
+               (vrts[edges[j].d] <((vrts[edges[j].s] -edges[j].comis)*edges[j].rate))
+                    ){
+                 if(((vrts[edges[j].s] -edges[j].comis)*edges[j].rate)>0){
+                    vrts[edges[j].d] =((vrts[edges[j].s] -edges[j].comis)*edges[j].rate);
+                 ind=1 ; break;}
+            }
+        }
+ string res=(ind==0)?"NO":"YES";
+   cout<<res;
+   return 0;
+
+}
+
+
