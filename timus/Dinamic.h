@@ -15,6 +15,7 @@ public:
     int vasyasFunction();
     int basedNumber();
     int flags();
+    int lukyTickets();
     
     virtual ~Dinamic();
 private:

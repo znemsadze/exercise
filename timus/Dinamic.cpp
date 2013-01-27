@@ -130,3 +130,40 @@ int Dinamic ::basedNumber() {
     return 0;
 }
 //----------------------------------------------
+
+//luckyticets------------------------------------
+bool ind[100][10];
+long long mem [100][10];
+
+int somerec(int s,int n){
+    
+    if(ind[s][n])return mem[s][n];
+    int sum=0;
+    if(n==1){
+        return (s<=9)?1:0;
+    }
+    
+    for(int i=0;i<=9;i++){
+        if(i<=s){
+            sum+=somerec(s-i,n-1);
+        }
+    }
+    ind[s][n]=true;
+    mem[s][n]=sum;
+    return sum;
+    
+    
+}
+
+int Dinamic::lukyTickets(){
+        int n;long long res=0;
+    cin>>n;
+    int p=n/2;int t,ss;
+    for(int i=0;i<p*10;i++){
+        res+=(somerec(i,p)*somerec(i,p));
+    }
+    
+    cout<<res;
+    
+
+}
