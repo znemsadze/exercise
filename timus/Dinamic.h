@@ -16,7 +16,7 @@ public:
     int basedNumber();
     int flags();
     int lukyTickets();
-    
+    int barneyStenson();
     virtual ~Dinamic();
 private:
 
