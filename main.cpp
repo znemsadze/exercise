@@ -18,9 +18,9 @@
 using namespace std;
 
  
-long long R[100000][100000];
-bool ind[100000][100000];
-long m[100000];
+long long R[1000][100];
+bool ind[100][1000];
+long m[1000];
 
 long long rcalc(long long i,long long j){
     if(ind[i][i]){
@@ -39,7 +39,7 @@ long long rcalc(long long i,long long j){
 
 
 int  profit(){
- freopen("input.txt", "rt", stdin);
+//freopen("input.txt", "rt", stdin);
   // freopen("output.txt", "wt", stdout);
   int n;
   cin>>n;
