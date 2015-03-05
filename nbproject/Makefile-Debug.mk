@@ -35,10 +35,10 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/main.o \
 	${OBJECTDIR}/eolimp/Solved.o \
-	${OBJECTDIR}/timus/Grafs.o \
-	${OBJECTDIR}/eolimp/eolimp1.o
+	${OBJECTDIR}/eolimp/eolimp1.o \
+	${OBJECTDIR}/main.o \
+	${OBJECTDIR}/timus/Grafs.o
 
 
 # C Compiler Flags
@@ -63,27 +63,27 @@ LDLIBSOPTIONS=
 
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/exercise: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/exercise ${OBJECTFILES} ${LDLIBSOPTIONS} 
-
-${OBJECTDIR}/main.o: main.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/main.o main.cpp
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/exercise ${OBJECTFILES} ${LDLIBSOPTIONS}
 
 ${OBJECTDIR}/eolimp/Solved.o: eolimp/Solved.cpp 
 	${MKDIR} -p ${OBJECTDIR}/eolimp
-	${RM} $@.d
-	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/eolimp/Solved.o eolimp/Solved.cpp
-
-${OBJECTDIR}/timus/Grafs.o: timus/Grafs.cpp 
-	${MKDIR} -p ${OBJECTDIR}/timus
-	${RM} $@.d
-	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/timus/Grafs.o timus/Grafs.cpp
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/eolimp/Solved.o eolimp/Solved.cpp
 
 ${OBJECTDIR}/eolimp/eolimp1.o: eolimp/eolimp1.cpp 
 	${MKDIR} -p ${OBJECTDIR}/eolimp
-	${RM} $@.d
-	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/eolimp/eolimp1.o eolimp/eolimp1.cpp
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/eolimp/eolimp1.o eolimp/eolimp1.cpp
+
+${OBJECTDIR}/main.o: main.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
+
+${OBJECTDIR}/timus/Grafs.o: timus/Grafs.cpp 
+	${MKDIR} -p ${OBJECTDIR}/timus
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/timus/Grafs.o timus/Grafs.cpp
 
 # Subprojects
 .build-subprojects:

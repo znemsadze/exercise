@@ -17,6 +17,7 @@ public:
     int flags();
     int lukyTickets();
     int barneyStenson();
+    int scuareCountry();
     virtual ~Dinamic();
 private:
 

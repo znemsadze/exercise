@@ -17,6 +17,9 @@ public:
     
     int binaryLexicographic();
     
+   
+    
+    
 private:
 
 };
