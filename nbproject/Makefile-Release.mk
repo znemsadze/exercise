@@ -35,6 +35,8 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/PARTY/NewYearTransportiation.o \
+	${OBJECTDIR}/PARTY/Party.o \
 	${OBJECTDIR}/eolimp/Solved.o \
 	${OBJECTDIR}/eolimp/eolimp1.o \
 	${OBJECTDIR}/main.o \
@@ -64,6 +66,16 @@ LDLIBSOPTIONS=
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/exercise: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/exercise ${OBJECTFILES} ${LDLIBSOPTIONS}
+
+${OBJECTDIR}/PARTY/NewYearTransportiation.o: PARTY/NewYearTransportiation.cpp 
+	${MKDIR} -p ${OBJECTDIR}/PARTY
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/PARTY/NewYearTransportiation.o PARTY/NewYearTransportiation.cpp
+
+${OBJECTDIR}/PARTY/Party.o: PARTY/Party.cpp 
+	${MKDIR} -p ${OBJECTDIR}/PARTY
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/PARTY/Party.o PARTY/Party.cpp
 
 ${OBJECTDIR}/eolimp/Solved.o: eolimp/Solved.cpp 
 	${MKDIR} -p ${OBJECTDIR}/eolimp

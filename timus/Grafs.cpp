@@ -60,6 +60,8 @@ struct Edge{
     
     
 };
+
+ 
  
 Grafs::Grafs() {
 }
@@ -455,5 +457,4 @@ int Grafs::curencyExchange(){
    return 0;
 
 }
-
-
+ 

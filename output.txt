@@ -1,7 +1,4 @@
-5
-18
-18
-18
-18
-18
-3000
+1 undefined
+2 undefined
+5 undefined
+NO

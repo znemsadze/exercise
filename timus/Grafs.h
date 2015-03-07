@@ -18,7 +18,7 @@ public:
     int rightPlate();
     int metro();
     int curencyExchange();
-    
+     
 private:
 
 };
