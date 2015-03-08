@@ -13,9 +13,11 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>PARTY/BSTParlament.cpp</itemPath>
       <itemPath>timus/Grafs.cpp</itemPath>
       <itemPath>timus/Grafs.h</itemPath>
       <itemPath>PARTY/NewYearTransportiation.cpp</itemPath>
+      <itemPath>PARTY/NonYekaterinburgSubway.cpp</itemPath>
       <itemPath>PARTY/Party.cpp</itemPath>
       <itemPath>eolimp/Solved.cpp</itemPath>
       <itemPath>eolimp/Solved.h</itemPath>
@@ -45,7 +47,11 @@
       </toolsSet>
       <compileType>
       </compileType>
+      <item path="PARTY/BSTParlament.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="PARTY/NewYearTransportiation.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="PARTY/NonYekaterinburgSubway.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="PARTY/Party.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -86,7 +92,11 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="PARTY/BSTParlament.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="PARTY/NewYearTransportiation.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="PARTY/NonYekaterinburgSubway.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="PARTY/Party.cpp" ex="false" tool="1" flavor2="0">
       </item>

@@ -25,12 +25,13 @@ struct El{
 } el;
 
 
-
+ 
  
 
 int trnsportation() {
-    vector< vector<El> > vct(0, vector<El>(0));
-   
+
+      vector< vector<El> > vct(0, vector<El>(0));
+      
     freopen("input.txt", "rt", stdin);
     long n, t,x;
     cin>>n>>t;

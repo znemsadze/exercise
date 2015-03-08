@@ -35,7 +35,9 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/PARTY/BSTParlament.o \
 	${OBJECTDIR}/PARTY/NewYearTransportiation.o \
+	${OBJECTDIR}/PARTY/NonYekaterinburgSubway.o \
 	${OBJECTDIR}/PARTY/Party.o \
 	${OBJECTDIR}/eolimp/Solved.o \
 	${OBJECTDIR}/eolimp/eolimp1.o \
@@ -67,10 +69,20 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/exercise: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/exercise ${OBJECTFILES} ${LDLIBSOPTIONS}
 
+${OBJECTDIR}/PARTY/BSTParlament.o: PARTY/BSTParlament.cpp 
+	${MKDIR} -p ${OBJECTDIR}/PARTY
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/PARTY/BSTParlament.o PARTY/BSTParlament.cpp
+
 ${OBJECTDIR}/PARTY/NewYearTransportiation.o: PARTY/NewYearTransportiation.cpp 
 	${MKDIR} -p ${OBJECTDIR}/PARTY
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/PARTY/NewYearTransportiation.o PARTY/NewYearTransportiation.cpp
+
+${OBJECTDIR}/PARTY/NonYekaterinburgSubway.o: PARTY/NonYekaterinburgSubway.cpp 
+	${MKDIR} -p ${OBJECTDIR}/PARTY
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/PARTY/NonYekaterinburgSubway.o PARTY/NonYekaterinburgSubway.cpp
 
 ${OBJECTDIR}/PARTY/Party.o: PARTY/Party.cpp 
 	${MKDIR} -p ${OBJECTDIR}/PARTY
