@@ -22,13 +22,14 @@
 using namespace std;
 
  
-   vector<vector<short  > > senators(0, vector<short  >(0));
-   vector< vector<short  > > reversed(0, vector<short  >(0));
+
 int jobbery() {
+       vector<vector<short  > > senators(0, vector<short  >(0));
+   vector< vector<short  > > reversed(0, vector<short  >(0));
     freopen("input.txt", "rt", stdin);
       short n, x, y;
 
-     scanf("%d", &n);
+//     scanf("%d", &n);
  
    
  
@@ -38,12 +39,12 @@ int jobbery() {
       
         senators.push_back(vector<short  >(0));
         senators[senators.size() - 1].push_back(i + 1);
-         scanf("%d", &x);
+//         scanf("%d", &x);
         
         while (x != 0) {
              
             senators[senators.size() - 1].push_back(x);
-             scanf("%d", &x);
+//             scanf("%d", &x);
             
         }
 
@@ -173,7 +174,4 @@ int jobbery() {
     return 0;
 }
 
-//int main() {
-//    jobbery();
-//
-//}
+ 

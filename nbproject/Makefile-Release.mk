@@ -36,11 +36,11 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/PARTY/BSTParlament.o \
-	${OBJECTDIR}/PARTY/Jobbery.o \
 	${OBJECTDIR}/PARTY/NewYearTransportiation.o \
 	${OBJECTDIR}/PARTY/NonYekaterinburgSubway.o \
 	${OBJECTDIR}/PARTY/Party.o \
 	${OBJECTDIR}/PARTY/TopologicalSorting.o \
+	${OBJECTDIR}/PARTY/jobbery.o \
 	${OBJECTDIR}/eolimp/Solved.o \
 	${OBJECTDIR}/eolimp/eolimp1.o \
 	${OBJECTDIR}/main.o \
@@ -76,11 +76,6 @@ ${OBJECTDIR}/PARTY/BSTParlament.o: PARTY/BSTParlament.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/PARTY/BSTParlament.o PARTY/BSTParlament.cpp
 
-${OBJECTDIR}/PARTY/Jobbery.o: PARTY/Jobbery.c++ 
-	${MKDIR} -p ${OBJECTDIR}/PARTY
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/PARTY/Jobbery.o PARTY/Jobbery.c++
-
 ${OBJECTDIR}/PARTY/NewYearTransportiation.o: PARTY/NewYearTransportiation.cpp 
 	${MKDIR} -p ${OBJECTDIR}/PARTY
 	${RM} "$@.d"
@@ -100,6 +95,11 @@ ${OBJECTDIR}/PARTY/TopologicalSorting.o: PARTY/TopologicalSorting.cpp
 	${MKDIR} -p ${OBJECTDIR}/PARTY
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/PARTY/TopologicalSorting.o PARTY/TopologicalSorting.cpp
+
+${OBJECTDIR}/PARTY/jobbery.o: PARTY/jobbery.cpp 
+	${MKDIR} -p ${OBJECTDIR}/PARTY
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/PARTY/jobbery.o PARTY/jobbery.cpp
 
 ${OBJECTDIR}/eolimp/Solved.o: eolimp/Solved.cpp 
 	${MKDIR} -p ${OBJECTDIR}/eolimp
