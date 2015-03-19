@@ -16,11 +16,13 @@
       <itemPath>PARTY/BSTParlament.cpp</itemPath>
       <itemPath>timus/Grafs.cpp</itemPath>
       <itemPath>timus/Grafs.h</itemPath>
+      <itemPath>PARTY/Jobbery.c++</itemPath>
       <itemPath>PARTY/NewYearTransportiation.cpp</itemPath>
       <itemPath>PARTY/NonYekaterinburgSubway.cpp</itemPath>
       <itemPath>PARTY/Party.cpp</itemPath>
       <itemPath>eolimp/Solved.cpp</itemPath>
       <itemPath>eolimp/Solved.h</itemPath>
+      <itemPath>PARTY/TopologicalSorting.cpp</itemPath>
       <itemPath>eolimp/eolimp1.cpp</itemPath>
       <itemPath>eolimp/eolimp1.h</itemPath>
       <itemPath>main.cpp</itemPath>
@@ -49,11 +51,15 @@
       </compileType>
       <item path="PARTY/BSTParlament.cpp" ex="false" tool="1" flavor2="0">
       </item>
+      <item path="PARTY/Jobbery.c++" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="PARTY/NewYearTransportiation.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="PARTY/NonYekaterinburgSubway.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="PARTY/Party.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="PARTY/TopologicalSorting.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="eolimp/Solved.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -94,11 +100,15 @@
       </compileType>
       <item path="PARTY/BSTParlament.cpp" ex="false" tool="1" flavor2="0">
       </item>
+      <item path="PARTY/Jobbery.c++" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="PARTY/NewYearTransportiation.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="PARTY/NonYekaterinburgSubway.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="PARTY/Party.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="PARTY/TopologicalSorting.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="eolimp/Solved.cpp" ex="false" tool="1" flavor2="0">
       </item>
