@@ -13,15 +13,19 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>unionfind/AnansisCobweb.cpp</itemPath>
       <itemPath>PARTY/BSTParlament.cpp</itemPath>
       <itemPath>timus/Grafs.cpp</itemPath>
       <itemPath>timus/Grafs.h</itemPath>
       <itemPath>PARTY/NewYearTransportiation.cpp</itemPath>
       <itemPath>PARTY/NonYekaterinburgSubway.cpp</itemPath>
       <itemPath>PARTY/Party.cpp</itemPath>
+      <itemPath>unionfind/RoadsNotOnlyinBerland.cpp</itemPath>
       <itemPath>eolimp/Solved.cpp</itemPath>
       <itemPath>eolimp/Solved.h</itemPath>
       <itemPath>PARTY/TopologicalSorting.cpp</itemPath>
+      <itemPath>unionfind/TwoSets.cpp</itemPath>
+      <itemPath>PARTY/dirt_snapshot.cpp</itemPath>
       <itemPath>eolimp/eolimp1.cpp</itemPath>
       <itemPath>eolimp/eolimp1.h</itemPath>
       <itemPath>PARTY/jobbery.cpp</itemPath>
@@ -59,6 +63,8 @@
       </item>
       <item path="PARTY/TopologicalSorting.cpp" ex="false" tool="1" flavor2="0">
       </item>
+      <item path="PARTY/dirt_snapshot.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="PARTY/jobbery.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="eolimp/Solved.cpp" ex="false" tool="1" flavor2="0">
@@ -76,6 +82,15 @@
       <item path="timus/Grafs.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="timus/newClass.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="unionfind/AnansisCobweb.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="unionfind/RoadsNotOnlyinBerland.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="unionfind/TwoSets.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -108,6 +123,8 @@
       </item>
       <item path="PARTY/TopologicalSorting.cpp" ex="false" tool="1" flavor2="0">
       </item>
+      <item path="PARTY/dirt_snapshot.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="PARTY/jobbery.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="eolimp/Solved.cpp" ex="false" tool="1" flavor2="0">
@@ -125,6 +142,15 @@
       <item path="timus/Grafs.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="timus/newClass.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="unionfind/AnansisCobweb.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="unionfind/RoadsNotOnlyinBerland.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="unionfind/TwoSets.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
   </confs>

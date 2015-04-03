@@ -40,11 +40,15 @@ OBJECTFILES= \
 	${OBJECTDIR}/PARTY/NonYekaterinburgSubway.o \
 	${OBJECTDIR}/PARTY/Party.o \
 	${OBJECTDIR}/PARTY/TopologicalSorting.o \
+	${OBJECTDIR}/PARTY/dirt_snapshot.o \
 	${OBJECTDIR}/PARTY/jobbery.o \
 	${OBJECTDIR}/eolimp/Solved.o \
 	${OBJECTDIR}/eolimp/eolimp1.o \
 	${OBJECTDIR}/main.o \
-	${OBJECTDIR}/timus/Grafs.o
+	${OBJECTDIR}/timus/Grafs.o \
+	${OBJECTDIR}/unionfind/AnansisCobweb.o \
+	${OBJECTDIR}/unionfind/RoadsNotOnlyinBerland.o \
+	${OBJECTDIR}/unionfind/TwoSets.o
 
 
 # C Compiler Flags
@@ -96,6 +100,11 @@ ${OBJECTDIR}/PARTY/TopologicalSorting.o: PARTY/TopologicalSorting.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/PARTY/TopologicalSorting.o PARTY/TopologicalSorting.cpp
 
+${OBJECTDIR}/PARTY/dirt_snapshot.o: PARTY/dirt_snapshot.cpp 
+	${MKDIR} -p ${OBJECTDIR}/PARTY
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/PARTY/dirt_snapshot.o PARTY/dirt_snapshot.cpp
+
 ${OBJECTDIR}/PARTY/jobbery.o: PARTY/jobbery.cpp 
 	${MKDIR} -p ${OBJECTDIR}/PARTY
 	${RM} "$@.d"
@@ -120,6 +129,21 @@ ${OBJECTDIR}/timus/Grafs.o: timus/Grafs.cpp
 	${MKDIR} -p ${OBJECTDIR}/timus
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/timus/Grafs.o timus/Grafs.cpp
+
+${OBJECTDIR}/unionfind/AnansisCobweb.o: unionfind/AnansisCobweb.cpp 
+	${MKDIR} -p ${OBJECTDIR}/unionfind
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/unionfind/AnansisCobweb.o unionfind/AnansisCobweb.cpp
+
+${OBJECTDIR}/unionfind/RoadsNotOnlyinBerland.o: unionfind/RoadsNotOnlyinBerland.cpp 
+	${MKDIR} -p ${OBJECTDIR}/unionfind
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/unionfind/RoadsNotOnlyinBerland.o unionfind/RoadsNotOnlyinBerland.cpp
+
+${OBJECTDIR}/unionfind/TwoSets.o: unionfind/TwoSets.cpp 
+	${MKDIR} -p ${OBJECTDIR}/unionfind
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/unionfind/TwoSets.o unionfind/TwoSets.cpp
 
 # Subprojects
 .build-subprojects:
